@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script>
+        function handlerClick_Card(id) {
+            //alert("hice clikc en " + id);
+            //DOM Document Object Model del HTML
+            let user = document.getElementById(id);
+            //para llegar al elemento <h3>0</h3> desde el código. Utilizo el método children 
+            //del objeto user
+            //console.log(user.children[0].children[0].children[1].children[1]);
+
+            //let contador = (user.children[0].children[0].children[1].children[1]);
+            //para obtener el texto del contador se utiliza el innerText
+
+            contador.innerText = parseInt((contador.innerText)) + 1;
+
+            // TODO 1: usar querySelector en lugar de children
+            let contador = user.querySelector();
+            // TODO 2: quiero generar el componente usuario (li) de manera
+            // automatica con javascript
+            // TODO 3: Repasar HTML y CSS del tutorial: https://developer.mozilla.org/es/docs/Learn/HTML
+
+
+        }
+    </script>
 </head>
 
 <body>
@@ -18,7 +41,7 @@
     <main>
         <h1>Usuarios</h1>
         <ul class="users-list">
-            <li class="user-item">
+            <li class="user-item" id="1" onclick="handlerClick_Card(1)">
                 <div class="card user-item__content">
                     <a href="#">
                         <div class="user-item__image avatar">
@@ -26,12 +49,12 @@
                         </div>
                         <div class="user-item__info">
                             <h2>Adele Vance</h2>
-                            <h3>@Adele</h3>
+                            <h3>0</h3>
                         </div>
                     </a>
                 </div>
             </li>
-            <li class="user-item">
+            <li class="user-item" id="2" onclick="handlerClick_Card(2)">
                 <div class="card user-item__content">
                     <a href="#">
                         <div class="user-item__image avatar">
@@ -39,7 +62,7 @@
                         </div>
                         <div class="user-item__info">
                             <h2>Alex Wilber</h2>
-                            <h3>@Alex</h3>
+                            <h3>0</h3>
                         </div>
                     </a>
                 </div>
