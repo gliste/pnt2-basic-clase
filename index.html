@@ -11,19 +11,19 @@
             //alert("hice clikc en " + id);
             //DOM Document Object Model del HTML
             let user = document.getElementById(id);
-            //para llegar al elemento <h3>0</h3> desde el código. Utilizo el método children 
-            //del objeto user
+            //para llegar al elemento <h3>0</h3> desde el código. Utilizo el método children del objeto user
             //console.log(user.children[0].children[0].children[1].children[1]);
-
-            //let contador = (user.children[0].children[0].children[1].children[1]);
-            //para obtener el texto del contador se utiliza el innerText
-
-            contador.innerText = parseInt((contador.innerText)) + 1;
+            //la función children permite navegar dentro de los objetos
+            //let contador = user.children[0].children[0].children[1].children[1];
+            //para obtener el texto del contador se utiliza el innerText lo parseo para poder operarlo
+            let contador = user.querySelector(".user-item__info h3");
+            console.log(contador);
+            contador.innerText = parseInt(contador.innerText) + 1;
 
             // TODO 1: usar querySelector en lugar de children
-            let contador = user.querySelector();
-            // TODO 2: quiero generar el componente usuario (li) de manera
-            // automatica con javascript
+            //let contador = user.querySelector();
+            // TODO 2: quiero generar el componente usuario (li) de manera automatica con javascript
+            document.createElement("li");
             // TODO 3: Repasar HTML y CSS del tutorial: https://developer.mozilla.org/es/docs/Learn/HTML
 
 
