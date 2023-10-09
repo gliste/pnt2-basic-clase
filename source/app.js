@@ -1,3 +1,6 @@
+import { users } from "../data/users.js";
+//al importar/traer una estructura por recorrer, no es necesaria la declaración del array
+
 //document.addEventListener("DOMContentLoaded", () => holaMundo());
 //esta función permite la ejecución del load de la página. Cuando se termina de cargar el html.
 //document.addEventListener("DOMContentLoaded", () => createUser());
@@ -41,7 +44,7 @@ function createUser(user) {
 
     //se crea el link 
     const link = document.createElement("a");
-    link.href = "#"; //Podría ir un link a otra página
+    link.href = "user.htm?userId=" + user["Object Id"]; //Podría ir un link a otra página. Se agregó luego de crear user.html
     card.appendChild(link);
 
     //se crea el div que contiene la imagen
@@ -51,7 +54,7 @@ function createUser(user) {
     link.appendChild(userItemImagen);
 
     const imageUser = document.createElement("img");
-    imageUser.src = `img/${user.name}.jpg`;
+    imageUser.src = `img/${user["Display name"]}.jpg`;
     userItemImagen.appendChild(imageUser);
 
     const userItemInfo = document.createElement("div");
@@ -59,11 +62,11 @@ function createUser(user) {
     link.appendChild(userItemInfo);
 
     const nombreUser = document.createElement("h2");
-    nombreUser.innerHTML = user.name;
+    nombreUser.innerHTML = user["Display name"];
     userItemInfo.appendChild(nombreUser);
 
     const twitter = document.createElement("h3");
-    twitter.innerHTML = user.twitter;
+    twitter.innerHTML = user.Title;
     userItemInfo.appendChild(twitter);
 
 

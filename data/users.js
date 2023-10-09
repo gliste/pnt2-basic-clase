@@ -1,5 +1,4 @@
-import { user } from "../data/users.js";
-//al importar/traer una estructura por recorrer, no es necesaria la declaración del array
+
 const users = [
     {
         "Block credential": "FALSE",
