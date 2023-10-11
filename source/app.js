@@ -48,7 +48,6 @@ function createUser(user) {
     card.appendChild(link);
 
     //se crea el div que contiene la imagen
-
     const userItemImagen = document.createElement("div");
     userItemImagen.className = "user-item__image avatar";
     link.appendChild(userItemImagen);
